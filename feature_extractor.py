@@ -1,4 +1,3 @@
-import numpy as np
 from config import CONTACT_DISTANCE
 from utils import distance
 
@@ -17,14 +16,12 @@ def extract_features(protein_atoms,rna_atoms):
                 contacts+=1
                 distances.append(d)
 
+    avg_dist=sum(distances)/len(distances) if distances else 0
+
     interface_density=len(distances)
 
-    avg_dist=np.mean(distances) if distances else 0
-
-    features={
+    return {
         "contacts":contacts,
         "avg_distance":avg_dist,
         "interface_density":interface_density
     }
-
-    return features
