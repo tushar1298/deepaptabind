@@ -9,4 +9,5 @@ torch-geometric
 py3Dmol
 scikit-learn
 requests
-rdkit
+networkx
+scipy
