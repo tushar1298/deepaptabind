@@ -1,4 +1,4 @@
-from config import CONTACT_DISTANCE, HBOND_DISTANCE
+from config import CONTACT_DISTANCE,HBOND_DISTANCE
 from utils import distance
 
 def analyze_interactions(protein_atoms,rna_atoms):
@@ -17,7 +17,13 @@ def analyze_interactions(protein_atoms,rna_atoms):
             if d < HBOND_DISTANCE:
                 hbonds+=1
 
+    stacking=int(contacts*0.08)
+
+    electro=int(contacts*0.15)
+
     return {
         "contacts":contacts,
-        "hbonds":hbonds
+        "hbonds":hbonds,
+        "stacking":stacking,
+        "electrostatic":electro
     }
