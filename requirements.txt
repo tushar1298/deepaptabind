@@ -8,5 +8,5 @@ torch
 torch-geometric
 py3Dmol
 scikit-learn
-request
+requests
 rdkit
