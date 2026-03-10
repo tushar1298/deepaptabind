@@ -5,11 +5,6 @@ def distance(a,b):
 
 def center_of_mass(coords):
     return np.mean(coords,axis=0)
-
-def safe_divide(a,b):
-    if b==0:
-        return 0
-    return a/b
 import requests
 
 def fetch_pdb(pdb_id):
