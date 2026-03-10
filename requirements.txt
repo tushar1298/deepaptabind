@@ -5,9 +5,8 @@ pandas
 matplotlib
 seaborn
 torch
-torch-geometric
 py3Dmol
-scikit-learn
 requests
-networkx
 scipy
+networkx
+scikit-learn
