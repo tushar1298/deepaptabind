@@ -36,4 +36,4 @@ def predict_dl(features):
 
     pred=model(x)
 
-    return float(pred.detach().numpy()[0])
+    return pred.detach().cpu().item()
